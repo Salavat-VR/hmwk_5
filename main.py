@@ -1,7 +1,9 @@
+
 from faker import Faker
 from flask import Flask, redirect, url_for, render_template, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import Column, Integer, String
+
 
 fake = Faker()
 
@@ -20,6 +22,7 @@ class User(db.Model):
     name = Column(String(80), unique=True, nullable=False)
     email = Column(String(120), unique=True, nullable=False)
 
+
     def __init__(self, *args, **kwargs):
         super(User, self).__init__(*args, **kwargs)
 
@@ -27,9 +30,11 @@ class User(db.Model):
         return 'User number {} with name {} & email {}\n'.format(self.id, self.name, self.email)
 
 
+
 @app.route("/")
 def home():
     return render_template("index.html")
+
 
 
 @app.route("/users/all")
@@ -65,6 +70,7 @@ def users_count():
     return jsonify({"the quantity of users": quantity})
 
 
+
 @app.route("/users/add", methods=['GET', 'POST'])
 def users_add():
     if request.method == "GET":
@@ -80,3 +86,4 @@ def users_add():
 
 if __name__ == "__main__":
     app.run(debug=True)
+

@@ -16,6 +16,11 @@ Django==3.0.3
 entrypoints==0.3
 Faker==6.6.2
 filelock==3.0.12
+flake8==3.9.0
+flake8-builtins==1.5.3
+flake8-docstrings==1.6.0
+flake8-import-order==0.18.1
+flake8-quotes==3.2.0
 Flask==1.1.2
 Flask-SQLAlchemy==2.5.1
 greenlet==1.0.0
@@ -35,6 +40,7 @@ jupyterlab-server==1.0.7
 kiwisolver==1.1.0
 MarkupSafe==1.1.1
 matplotlib==3.1.2
+mccabe==0.6.1
 mistune==0.8.4
 nbconvert==5.6.1
 nbformat==5.0.4
@@ -48,6 +54,9 @@ pickleshare==0.7.5
 Pillow==7.0.0
 prometheus-client==0.7.1
 prompt-toolkit==3.0.4
+pycodestyle==2.7.0
+pydocstyle==6.0.0
+pyflakes==2.3.1
 pygame==1.9.6
 Pygments==2.6.1
 pyparsing==2.4.5
@@ -62,6 +71,7 @@ requests==2.22.0
 selenium==3.141.0
 Send2Trash==1.5.0
 six==1.13.0
+snowballstemmer==2.1.0
 SQLAlchemy==1.4.2
 sqlparse==0.3.1
 terminado==0.8.3
